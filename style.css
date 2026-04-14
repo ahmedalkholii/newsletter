@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* منع مشاكل الـ Scroll عند فتح المنيو (اختياري) */
+:root {
+    scroll-behavior: smooth;
+}
+@media (min-width: 640px) {
+#menu-container {
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+}
+.nav-link {
+    @apply cursor-pointer text-xs font-bold transition-all duration-200 hover:text-green-700 dark:text-white dark:hover:text-green-500 md:text-base
+}

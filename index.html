@@ -4,62 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter App</title>
-    
-    <style type="text/tailwindcss">
-        @import "tailwindcss";
-
-        /* تفعيل نظام الكلاس للدارك مود */
-        @custom-variant dark (&:where(.dark, .dark *));
-        /* منع مشاكل الـ Scroll عند فتح المنيو (اختياري) */
-        :root {
-            scroll-behavior: smooth;
-        }
-        @media (min-width: 640px) {
-        #menu-container {
-            background-color: transparent !important;
-            background-image: none !important;
-            backdrop-filter: none !important;
-        }
-        }
-        .nav-link {
-            @apply cursor-pointer text-xs font-bold transition-all duration-200 hover:text-green-700 dark:text-white dark:hover:text-green-500 md:text-base
-        }
-    </style>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 </head>
-<body class="min-h-screen bg-red-500 dark:bg-slate-900 transition-colors duration-300">
+<body class="dark:bg-slate-900 transition-colors duration-300">
 
-    <header class="fixed top-0 right-0 z-40 flex w-full h-20 items-center justify-between  px-4 shadow-sm shadow-slate-300 transition-all dark:shadow-slate-800 md:px-10 lg:px-24 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
-        
-        <h1 class="text-lg font-bold text-green-700 dark:text-green-500 md:text-2xl lg:text-3xl">
-            Newsletter
-        </h1>
+    <header class="w-full z-40 h-20 shadow-sm shadow-slate-300 transition-all dark:shadow-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
 
-        <div id="menu-container" 
-            class="absolute right-0 top-20 h-screen  z-50 flex w-full flex-col items-center px-7 py-7 text-center
-            bg-white/80 dark:bg-slate-900/80
-            invisible pointer-events-none -translate-x-full transition-all duration-700 
-            sm:static sm:visible sm:flex-row sm:w-auto sm:translate-x-0 sm:bg-transparent dark:sm:bg-transparent sm:px-0 sm:py-0 sm:text-left sm:gap-6 md:gap-8 lg:gap-16 sm:pointer-events-auto backdrop-blur-md">
-            
-            <ul class="flex flex-col items-center gap-8 mb-8 sm:flex-row sm:mb-0 sm:gap-4 md:gap-6 lg:gap-8">
-                <li class="nav-link">How it works</li>
-                <li class="nav-link">Why Newsletterapp</li>
-                <li class="nav-link">Pricing</li>
-                <li class="nav-link">Blog</li>
-            </ul>
+        <div class="max-w-7xl mx-auto flex items-center justify-between h-full px-4">
+            <h1 class="text-lg font-bold text-green-700   dark:text-green-500 md:text-2xl lg:text-3xl">
+                Newsletter<sup class="mx-1 text-slate-900 text-sm font-normal dark:text-white">App</sup>
+            </h1>
 
-            <button aria-label="Log In" class="max-h-fit cursor-pointer rounded-full border-2 border-green-700 px-8 py-1 text-green-700 transition-all duration-200 hover:bg-green-700 hover:text-white dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-white">
-                LogIn
+            <div id="menu-container" 
+                class="absolute right-0 top-20 h-screen  z-50 flex w-full flex-col items-center px-7 py-7 text-center
+                bg-white/80 dark:bg-slate-900/80
+                invisible pointer-events-none -translate-x-full transition-all duration-700 
+                sm:static sm:visible sm:flex-row sm:w-auto sm:translate-x-0 sm:bg-transparent dark:sm:bg-transparent sm:px-0 sm:py-0 sm:text-left sm:gap-6 md:gap-8 lg:gap-16 sm:pointer-events-auto backdrop-blur-md">
+                
+                <ul class="flex flex-col items-center gap-8 mb-8 sm:flex-row sm:mb-0 sm:gap-4 md:gap-6 lg:gap-8">
+                    <li class="nav-link">How it works</li>
+                    <li class="nav-link">Why Newsletterapp</li>
+                    <li class="nav-link">Pricing</li>
+                    <li class="nav-link">Blog</li>
+                </ul>
+
+                <button aria-label="Log In" class="max-h-fit cursor-pointer rounded-full border-2 border-green-700 px-8 py-1 text-green-700 transition-all duration-200 hover:bg-green-700 hover:text-white dark:border-green-500 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-white">
+                    LogIn
+                </button>
+            </div>
+
+            <button aria-label="Toggle Menu" id="menu" class="flex cursor-pointer text-2xl dark:text-white sm:hidden p-2">
+                ☰
             </button>
         </div>
-
-        <button aria-label="Toggle Menu" id="menu" class="flex cursor-pointer text-2xl dark:text-white sm:hidden p-2">
-            ☰
-        </button>
     </header>
 
-    <h1 class="py-96">ahmed</h1>
+    <main class="py-60">
+        <section id="hero-content">
+            <h1 class="text-3xl font-bold dark:text-white">Bring back the joy of reading newsletters</h1>
+            <p class="mt-5 text-green-700 dark:text-green-500">Discover, subscribe and manage all your email newsletters in one place.</p>
+            <button class="bg-green-700 text-white text-sm px-5 py-1 mt-16 rounded-full dark:bg-green-500">Try For Free</button>
+        </section>
+        <section id="hero-frame"></section>
+    </main>
 
     <script src="main.js"></script>
 </body>
