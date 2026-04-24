@@ -16,3 +16,8 @@
 .nav-link {
     @apply cursor-pointer text-xs font-bold transition-all duration-200 hover:text-green-700 dark:text-white dark:hover:text-green-500 md:text-base
 }
+#userCard {
+    background-image: url('./Images/samble.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
